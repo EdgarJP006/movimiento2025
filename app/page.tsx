@@ -1,3 +1,6 @@
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
+
 const doctrineValues = [
   {
     title: "Autonomía Universitaria Irrestricta",
@@ -73,32 +76,7 @@ const navLinks = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-[#111827]">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-white/95 backdrop-blur">
-        <nav
-          aria-label="Navegación principal"
-          className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8"
-        >
-          <a href="#inicio" className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center border-2 border-[#a03d2b] bg-white text-sm font-black text-[#a03d2b]">
-              20
-            </span>
-            <span className="text-sm font-black uppercase tracking-wide text-black sm:text-base">
-              Movimiento Universitario 20-25
-            </span>
-          </a>
-          <div className="hidden items-center gap-7 lg:flex">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-bold text-[#111827] transition-all duration-300 hover:text-[#a03d2b] focus:outline-none focus:ring-2 focus:ring-[#a03d2b] focus:ring-offset-4"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <section
         id="inicio"
@@ -398,57 +376,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-black py-14 text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 md:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
-          <div>
-            <p className="text-2xl font-black">Movimiento Universitario 20-25</p>
-            <p className="mt-4 max-w-xl leading-7 text-white/75">
-              Movimiento Universitario 20-25. Fuerza gremial de la Universidad
-              de Panamá. Dedicados a la defensa del bien público social y la
-              excelencia académica.
-            </p>
-            <p className="mt-6 text-sm text-white/60">
-              © 2026 Movimiento Universitario 20-25. Plataforma de difusión
-              política e informativa independiente. Todos los derechos
-              reservados.
-            </p>
-          </div>
-          <nav aria-label="Enlaces políticos">
-            <h3 className="text-sm font-black uppercase tracking-[0.2em] text-[#a03d2b]">
-              Enlaces Políticos
-            </h3>
-            <div className="mt-5 grid gap-3">
-              {["Manifiesto", "Pilares", "Circulares"].map((link) => (
-                <a
-                  key={link}
-                  href="#documentos"
-                  className="text-sm font-semibold text-white/80 transition-all duration-300 hover:text-[#a03d2b] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-4 focus:ring-offset-black"
-                >
-                  {link}
-                </a>
-              ))}
-            </div>
-          </nav>
-          <nav aria-label="Enlaces del campus">
-            <h3 className="text-sm font-black uppercase tracking-[0.2em] text-[#a03d2b]">
-              Enlaces del Campus
-            </h3>
-            <div className="mt-5 grid gap-3">
-              {["Facultades", "Centros Regionales", "Gaceta Universitaria"].map(
-                (link) => (
-                  <a
-                    key={link}
-                    href="#"
-                    className="text-sm font-semibold text-white/80 transition-all duration-300 hover:text-[#a03d2b] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-4 focus:ring-offset-black"
-                  >
-                    {link}
-                  </a>
-                )
-              )}
-            </div>
-          </nav>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
