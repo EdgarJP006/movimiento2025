@@ -1,8 +1,26 @@
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getPublishedActivities } from "@/lib/content/queries";
+import { absoluteUrl, seoImages } from "@/lib/seo";
+import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Actividades",
+  description:
+    "Agenda pública de actividades institucionales, académicas y territoriales del Movimiento Universitario 2025 en la Universidad de Panamá.",
+  alternates: {
+    canonical: absoluteUrl("/actividades")
+  },
+  openGraph: {
+    title: "Actividades | Movimiento Universitario 2025",
+    description:
+      "Agenda pública de actividades del Movimiento Universitario 2025.",
+    url: absoluteUrl("/actividades"),
+    images: seoImages
+  }
+};
 
 export default async function ActivitiesPage() {
   const activities = await getPublishedActivities();

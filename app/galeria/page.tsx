@@ -1,8 +1,26 @@
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getPublishedGalleryItems } from "@/lib/content/queries";
+import { absoluteUrl, seoImages } from "@/lib/seo";
+import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Galería de Acción Universitaria",
+  description:
+    "Galería pública del Movimiento Universitario 2025 con imágenes de identidad institucional, actividades universitarias y presencia en el campus.",
+  alternates: {
+    canonical: absoluteUrl("/galeria")
+  },
+  openGraph: {
+    title: "Galería de Acción Universitaria | Movimiento Universitario 2025",
+    description:
+      "Archivo visual del Movimiento Universitario 2025 en la Universidad de Panamá.",
+    url: absoluteUrl("/galeria"),
+    images: seoImages
+  }
+};
 
 export default async function GalleryPage() {
   const galleryItems = await getPublishedGalleryItems();

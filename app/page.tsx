@@ -1,6 +1,22 @@
 import { BrandLogo } from "@/components/BrandLogo";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { absoluteUrl, seoImages, siteDescription, siteName } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Inicio",
+  description: siteDescription,
+  alternates: {
+    canonical: absoluteUrl("/")
+  },
+  openGraph: {
+    title: `${siteName} | Universidad de Panamá`,
+    description: siteDescription,
+    url: absoluteUrl("/"),
+    images: seoImages
+  }
+};
 
 const doctrineValues = [
   {
