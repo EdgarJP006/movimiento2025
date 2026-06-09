@@ -3,14 +3,14 @@ export function SiteFooter() {
     <footer className="bg-black py-14 text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 md:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
         <div>
-          <p className="text-2xl font-black">Movimiento Universitario 20-25</p>
+          <p className="text-2xl font-black">Movimiento Universitario 2025</p>
           <p className="mt-4 max-w-xl leading-7 text-white/75">
-            Movimiento Universitario 20-25. Fuerza gremial de la Universidad de
+            Movimiento Universitario 2025. Fuerza gremial de la Universidad de
             Panamá. Dedicados a la defensa del bien público social y la
             excelencia académica.
           </p>
           <p className="mt-6 text-sm text-white/60">
-            © 2026 Movimiento Universitario 20-25. Plataforma de difusión
+            © 2026 Movimiento Universitario 2025. Plataforma de difusión
             política e informativa independiente. Todos los derechos reservados.
           </p>
         </div>

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Movimiento Universitario 20-25 | Universidad de Panamá",
+  title: "Movimiento Universitario 2025 | Universidad de Panamá",
   description:
-    "Plataforma informativa del Movimiento Universitario 20-25 de la Universidad de Panamá."
+    "Plataforma informativa del Movimiento Universitario 2025 de la Universidad de Panamá."
 };
 
 export default function RootLayout({

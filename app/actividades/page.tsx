@@ -1,34 +1,12 @@
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { getPublishedActivities } from "@/lib/content/queries";
 
-const activities = [
-  {
-    date: "Semana 1",
-    title: "Asambleas de Base",
-    description:
-      "Encuentros con docentes, administrativos y estudiantes para consolidar vocerías por facultad, centro regional y extensión universitaria."
-  },
-  {
-    date: "Semana 2",
-    title: "Foros de Transformación Institucional",
-    description:
-      "Espacios de debate sobre autonomía universitaria, transparencia de gestión, escalafón administrativo y fortalecimiento académico."
-  },
-  {
-    date: "Semana 3",
-    title: "Jornadas de Afiliación",
-    description:
-      "Registro de nuevos integrantes, organización de comités de base y difusión de circulares oficiales del Movimiento Universitario 20-25."
-  },
-  {
-    date: "Semana 4",
-    title: "Giras a Centros Regionales",
-    description:
-      "Articulación territorial con liderazgos de Azuero, Veraguas, Colón y extensiones universitarias bajo principios de descentralización."
-  }
-];
+export const dynamic = "force-dynamic";
 
-export default function ActivitiesPage() {
+export default async function ActivitiesPage() {
+  const activities = await getPublishedActivities();
+
   return (
     <main className="min-h-screen bg-white text-[#111827]">
       <SiteHeader />
@@ -52,18 +30,32 @@ export default function ActivitiesPage() {
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {activities.map((activity) => (
               <article
-                key={activity.title}
-                className="border-l-4 border-[#a03d2b] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(160,61,43,0.16)]"
+                key={activity.id}
+                className="overflow-hidden border-l-4 border-[#a03d2b] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(160,61,43,0.16)]"
               >
-                <span className="text-sm font-black uppercase tracking-[0.18em] text-[#a03d2b]">
-                  {activity.date}
-                </span>
-                <h2 className="mt-4 text-2xl font-black text-black">
-                  {activity.title}
-                </h2>
-                <p className="mt-4 leading-7 text-[#111827]">
-                  {activity.description}
-                </p>
+                {activity.image_url ? (
+                  <img
+                    src={activity.image_url}
+                    alt={activity.title}
+                    className="h-56 w-full object-cover"
+                  />
+                ) : null}
+                <div className="p-7">
+                  <span className="text-sm font-black uppercase tracking-[0.18em] text-[#a03d2b]">
+                    {activity.date ?? "Actividad"}
+                  </span>
+                  <h2 className="mt-4 text-2xl font-black text-black">
+                    {activity.title}
+                  </h2>
+                  <p className="mt-4 leading-7 text-[#111827]">
+                    {activity.description}
+                  </p>
+                  {activity.location ? (
+                    <p className="mt-5 text-sm font-black uppercase tracking-[0.16em] text-black/50">
+                      {activity.location}
+                    </p>
+                  ) : null}
+                </div>
               </article>
             ))}
           </div>

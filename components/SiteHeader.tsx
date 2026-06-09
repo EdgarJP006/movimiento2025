@@ -18,7 +18,7 @@ export function SiteHeader() {
             20
           </span>
           <span className="text-sm font-black uppercase tracking-wide text-black sm:text-base">
-            Movimiento Universitario 20-25
+            Movimiento Universitario 2025
           </span>
         </a>
         <div className="hidden items-center gap-7 lg:flex">

@@ -93,7 +93,7 @@ export default function Home() {
             </p>
             <h1 className="text-5xl font-black leading-[0.95] tracking-normal text-black sm:text-6xl lg:text-7xl">
               Movimiento Universitario{" "}
-              <span className="block text-[#a03d2b]">20-25</span>
+              <span className="block text-[#a03d2b]">2025</span>
             </h1>
             <p className="mt-7 max-w-3xl text-xl font-bold leading-8 text-[#111827] sm:text-2xl">
               Hacia la refundación institucional, la dignificación gremial y la
@@ -219,7 +219,7 @@ export default function Home() {
               Hacemos un llamado enérgico a toda la comunidad universitaria a
               vivir los procesos democráticos internos bajo los más estrictos
               códigos de ética, debate de ideas y respeto mutuo, rechazando la
-              difamación y el hostigamiento. El Movimiento 20-25 trabaja
+              difamación y el hostigamiento. El Movimiento 2025 trabaja
               activamente junto a las instancias de la Defensoría de los
               Universitarios para velar por un entorno de paz y libertad de
               pensamiento.
