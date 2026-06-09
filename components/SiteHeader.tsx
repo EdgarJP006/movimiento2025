@@ -1,4 +1,5 @@
 import { BrandLogo } from "./BrandLogo";
+import { MobileMenu } from "./MobileMenu";
 
 const navLinks = [
   { href: "/", label: "Inicio" },
@@ -34,6 +35,7 @@ export function SiteHeader() {
             </a>
           ))}
         </div>
+        <MobileMenu links={navLinks} />
       </nav>
     </header>
   );
