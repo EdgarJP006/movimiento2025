@@ -169,10 +169,10 @@ values
     true
   ),
   (
-    'Jornadas de Afiliación',
-    'Registro de nuevos integrantes, organización de comités de base y difusión de circulares oficiales del Movimiento Universitario 20-25.',
+    'Jornadas Informativas',
+    'Difusión de comunicados, orientación institucional y coordinación de actividades públicas del Movimiento Universitario 2025.',
     'Semana 3',
-    'Comités de base',
+    'Puntos informativos',
     true
   ),
   (

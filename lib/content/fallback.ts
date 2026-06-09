@@ -90,10 +90,10 @@ export const fallbackActivities: Activity[] = [
   {
     id: "fallback-activity-3",
     date: "Semana 3",
-    title: "Jornadas de Afiliación",
+    title: "Jornadas Informativas",
     description:
-      "Registro de nuevos integrantes, organización de comités de base y difusión de circulares oficiales del Movimiento Universitario 20-25.",
-    location: "Comités de base",
+      "Difusión de comunicados, orientación institucional y coordinación de actividades públicas del Movimiento Universitario 2025.",
+    location: "Puntos informativos",
     image_url: null,
     image_path: null,
     is_published: true,

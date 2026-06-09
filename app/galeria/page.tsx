@@ -15,14 +15,14 @@ export default async function GalleryPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <p className="text-sm font-black uppercase tracking-[0.22em] text-[#a03d2b]">
-              Galería de la Militancia y Acción Universitaria
+              Galería de Acción Universitaria
             </p>
             <h1 className="mt-4 text-4xl font-black tracking-normal text-black sm:text-6xl">
               Nuestra Presencia en el Campus
             </h1>
             <span className="mx-auto mt-6 block h-2 w-32 bg-[#a03d2b]" />
             <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-[#111827]">
-              Registro visual de identidad institucional, unidad gremial,
+              Archivo visual de identidad institucional, unidad gremial,
               comunidad estudiantil y trabajo académico en la Universidad de
               Panamá.
             </p>

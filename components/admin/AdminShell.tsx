@@ -9,7 +9,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
           className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-5 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8"
         >
           <a href="/admin/galeria" className="text-xl font-black text-black">
-            Admin Movimiento 20-25
+            Admin Movimiento 2025
           </a>
           <div className="flex flex-wrap items-center gap-4">
             <a

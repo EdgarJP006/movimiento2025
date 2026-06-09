@@ -1,10 +1,19 @@
+import { BrandLogo } from "./BrandLogo";
+
 export function SiteFooter() {
   return (
     <footer className="bg-black py-14 text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 md:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
         <div>
-          <p className="text-2xl font-black">Movimiento Universitario 2025</p>
-          <p className="mt-4 max-w-xl leading-7 text-white/75">
+          <div className="flex items-center gap-4">
+            <span className="flex h-16 w-16 items-center justify-center bg-white p-2">
+              <BrandLogo className="h-full w-full" />
+            </span>
+            <p className="text-2xl font-black">
+              Movimiento Universitario 2025
+            </p>
+          </div>
+          <p className="mt-5 max-w-xl leading-7 text-white/75">
             Movimiento Universitario 2025. Fuerza gremial de la Universidad de
             Panamá. Dedicados a la defensa del bien público social y la
             excelencia académica.

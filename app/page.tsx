@@ -1,3 +1,4 @@
+import { BrandLogo } from "@/components/BrandLogo";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -66,12 +67,9 @@ const documents = [
   "Comunicado Conjunto 3"
 ];
 
-const navLinks = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#doctrina", label: "Consigna" },
-  { href: "#pilares", label: "Pilares" },
-  { href: "#afiliacion", label: "Afiliación" }
-];
+const whatsappNumber = "+507 6123-4567";
+const whatsappHref =
+  "https://wa.me/50761234567?text=Hola%2C%20quisiera%20recibir%20informaci%C3%B3n%20del%20Movimiento%20Universitario%202025.";
 
 export default function Home() {
   return (
@@ -115,10 +113,10 @@ export default function Home() {
                 Descargar Manifiesto Político
               </a>
               <a
-                href="#afiliacion"
+                href="#contacto"
                 className="inline-flex items-center justify-center border-2 border-black bg-white px-6 py-4 text-sm font-black text-black transition-all duration-300 hover:border-[#a03d2b] hover:text-[#a03d2b] focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-4"
               >
-                Sumarse a la Acción
+                Contactar por WhatsApp
               </a>
             </div>
           </div>
@@ -130,9 +128,8 @@ export default function Home() {
               <span className="text-sm font-black uppercase tracking-[0.28em] text-[#a03d2b]">
                 Manifiesto
               </span>
-              <span className="text-7xl font-black leading-none text-black sm:text-8xl">
-                20
-                <span className="block text-[#a03d2b]">25</span>
+              <span className="flex flex-1 items-center justify-center py-5">
+                <BrandLogo className="h-40 w-40 sm:h-52 sm:w-52" />
               </span>
               <span className="h-2 w-24 bg-[#111827]" />
             </div>
@@ -295,84 +292,44 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="afiliacion" className="bg-white py-20 sm:py-24">
-        <div className="mx-auto grid max-w-7xl overflow-hidden px-5 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
-          <div className="bg-[#111827] p-8 text-white sm:p-10 lg:p-12">
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-[#a03d2b]">
-              Afiliación
-            </p>
-            <h2 className="mt-4 text-3xl font-black tracking-normal sm:text-5xl">
-              Súmate a la Transformación Universitaria
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-white/85">
-              Registra tus datos para unirte a los comités de base y recibir
-              nuestras circulares oficiales.
-            </p>
-          </div>
-
-          <form className="bg-[#F8FAFC] p-8 sm:p-10 lg:p-12">
-            <div className="grid gap-5 md:grid-cols-2">
-              <label className="block">
-                <span className="text-sm font-bold text-[#111827]">
-                  Nombre Completo
-                </span>
-                <input
-                  type="text"
-                  name="nombre"
-                  autoComplete="name"
-                  required
-                  className="mt-2 w-full border border-black/20 bg-white px-4 py-3 text-[#111827] outline-none transition-all duration-300 focus:border-[#a03d2b] focus:ring-2 focus:ring-[#a03d2b]/25"
-                />
-              </label>
-              <label className="block">
-                <span className="text-sm font-bold text-[#111827]">
-                  Correo Institucional
-                </span>
-                <input
-                  type="email"
-                  name="correo"
-                  autoComplete="email"
-                  required
-                  className="mt-2 w-full border border-black/20 bg-white px-4 py-3 text-[#111827] outline-none transition-all duration-300 focus:border-[#a03d2b] focus:ring-2 focus:ring-[#a03d2b]/25"
-                />
-              </label>
-              <label className="block">
-                <span className="text-sm font-bold text-[#111827]">
-                  Facultad / Centro Regional
-                </span>
-                <input
-                  type="text"
-                  name="facultad"
-                  required
-                  className="mt-2 w-full border border-black/20 bg-white px-4 py-3 text-[#111827] outline-none transition-all duration-300 focus:border-[#a03d2b] focus:ring-2 focus:ring-[#a03d2b]/25"
-                />
-              </label>
-              <label className="block">
-                <span className="text-sm font-bold text-[#111827]">
-                  Estamento
-                </span>
-                <select
-                  name="estamento"
-                  required
-                  className="mt-2 w-full border border-black/20 bg-white px-4 py-3 text-[#111827] outline-none transition-all duration-300 focus:border-[#a03d2b] focus:ring-2 focus:ring-[#a03d2b]/25"
-                  defaultValue=""
-                >
-                  <option value="" disabled>
-                    Seleccionar estamento
-                  </option>
-                  <option>Docente</option>
-                  <option>Administrativo</option>
-                  <option>Estudiante</option>
-                </select>
-              </label>
+      <section id="contacto" className="bg-white py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="grid overflow-hidden bg-[#111827] lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="p-8 text-white sm:p-10 lg:p-12">
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#a03d2b]">
+                Contacto institucional
+              </p>
+              <h2 className="mt-4 text-3xl font-black tracking-normal sm:text-5xl">
+                Comunícate con el Movimiento Universitario 2025
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-white/85">
+                Para información, comunicados, coordinación de actividades o
+                consultas generales, puedes escribir directamente al canal de
+                WhatsApp del movimiento.
+              </p>
             </div>
-            <button
-              type="submit"
-              className="mt-7 w-full bg-[#a03d2b] px-6 py-4 text-sm font-black text-white transition-all duration-300 hover:bg-[#832f21] focus:outline-none focus:ring-2 focus:ring-[#a03d2b] focus:ring-offset-4"
-            >
-              Registrar
-            </button>
-          </form>
+
+            <div className="bg-[#F8FAFC] p-8 sm:p-10 lg:p-12">
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#a03d2b]">
+                WhatsApp
+              </p>
+              <h3 className="mt-4 text-4xl font-black text-black">
+                {whatsappNumber}
+              </h3>
+              <p className="mt-5 leading-7 text-[#111827]">
+                Atención informativa para miembros de la comunidad universitaria
+                de la Universidad de Panamá.
+              </p>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-flex w-full items-center justify-center bg-[#a03d2b] px-6 py-4 text-sm font-black text-white transition-all duration-300 hover:bg-[#832f21] focus:outline-none focus:ring-2 focus:ring-[#a03d2b] focus:ring-offset-4 sm:w-auto"
+              >
+                Escribir por WhatsApp
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

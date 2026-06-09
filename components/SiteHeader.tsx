@@ -1,9 +1,11 @@
+import { BrandLogo } from "./BrandLogo";
+
 const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/#pilares", label: "Pilares" },
   { href: "/galeria", label: "Galería" },
   { href: "/actividades", label: "Actividades" },
-  { href: "/#afiliacion", label: "Afiliación" }
+  { href: "/#contacto", label: "Contacto" }
 ];
 
 export function SiteHeader() {
@@ -14,8 +16,8 @@ export function SiteHeader() {
         className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8"
       >
         <a href="/" className="flex items-center gap-3">
-          <span className="flex h-11 w-11 items-center justify-center border-2 border-[#a03d2b] bg-white text-sm font-black text-[#a03d2b]">
-            20
+          <span className="flex h-12 w-12 items-center justify-center bg-white">
+            <BrandLogo className="h-12 w-12" />
           </span>
           <span className="text-sm font-black uppercase tracking-wide text-black sm:text-base">
             Movimiento Universitario 2025
